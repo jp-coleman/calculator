@@ -16,11 +16,11 @@ fn main() {
 
 fn operate(operator: char, first: f32, second: f32) -> f32 {
     match operator {
-        '+' => first + second,
-        '-' => first + second,
-        '*' => first + second,
-        '/' => first + second,
-        _ => panic!("Invalid operator used!")
+        '+'             => first + second,
+        '-'             => first - second,
+        '*' | 'x' | 'X' => first * second,
+        '/'             => first / second,
+        _               => panic!("Invalid operator used!")
     }
 }
 
